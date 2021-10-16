@@ -35,7 +35,14 @@ model_lr.fit(x2, y2)
 axes[0].scatter(x1, y1)
 axes[1].scatter(x2, y2)
 
+axes[0].set_title("RT and ACC in Session 1")
+axes[1].set_title("RT and ACC in Session 2")
+axes[0].set_xlabel("RT")
+axes[1].set_xlabel("RT")
+axes[0].set_ylabel("ACC")
+axes[1].set_ylabel("ACC")
+
 axes[0].plot(x1, model_lr.predict(x1), linestyle="solid")
 axes[1].plot(x1, model_lr.predict(x1), linestyle="solid")
 plt.show()
-# print(df_session1_twoBack.head())
+
